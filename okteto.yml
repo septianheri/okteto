@@ -2,7 +2,7 @@ build:
   api:
     context: api
 deploy:
-  - apt-get install nodejs -y
+  - apt-get install nodejs npm -y
   - npm run
 dev:
   api:
