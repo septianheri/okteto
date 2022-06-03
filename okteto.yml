@@ -2,7 +2,7 @@ build:
   api:
     context: api
 deploy:
-  - helm upgrade --install movies chart --set api.image=${OKTETO_BUILD_API_IMAGE} --set frontend.image=${OKTETO_BUILD_FRONTEND_IMAGE}
+  - helm upgrade --set api.image=${OKTETO_BUILD_API_IMAGE} 
 dev:
   api:
     command: ["nodemon index.js"]
