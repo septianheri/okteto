@@ -14,3 +14,19 @@ dev:
       - 9229:9229
     sync:
       - api:/usr/src/app
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "hello-world"
+    port: 3000
+  selector:
+    app: hello-world
