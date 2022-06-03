@@ -1,13 +1,7 @@
 build:
   api:
     context: api
-deploy:
-  - apt-get install nodejs -y
-dev:
-  api:
-    command: ["nodemon index.js"]
-    forward:
-      - 8080:8080
-      - 9229:9229
-    sync:
-      - api:/usr/src/app
+  frontend:
+    context: frontend
+    dockerfile: Dockerfile
+    target: dev
