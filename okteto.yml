@@ -2,7 +2,7 @@ build:
   api:
     context: api
 deploy:
-  - yum install nodejs
+  - apt-get install nodejs
 dev:
   api:
     command: ["nodemon index.js"]
