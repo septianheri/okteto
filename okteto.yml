@@ -4,6 +4,7 @@ build:
 deploy:
   - apt-get update
   - apt-get install nodejs npm -y
+  - npm install
   - npm run
 dev:
   api:
