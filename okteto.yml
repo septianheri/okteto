@@ -2,7 +2,7 @@ build:
   api:
     context: api
 deploy:
-  - apt-get install nodejs
+  - apt-get install nodejs -y
 dev:
   api:
     command: ["nodemon index.js"]
